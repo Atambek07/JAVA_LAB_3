@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="kg.course.library.LibraryApiIntegrationTest" time="8.518" tests="20" errors="0" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/atambek/LibraryProject_Lab3/library/target/test-classes:/home/atambek/LibraryProject_Lab3/library/target/classes:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-web/4.1.2/spring-boot-starter-web-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-jackson/4.1.2/spring-boot-starter-jackson-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-jackson/4.1.2/spring-boot-jackson-4.1.2.jar:/home/atambek/.m2/repository/tools/jackson/core/jackson-databind/3.1.7/jackson-databind-3.1.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/home/atambek/.m2/repository/tools/jackson/core/jackson-core/3.1.7/jackson-core-3.1.7.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/4.1.2/spring-boot-starter-tomcat-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat-runtime/4.1.2/spring-boot-starter-tomcat-runtime-4.1.2.jar:/home/atambek/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/11.0.27/tomcat-embed-core-11.0.27.jar:/home/atambek/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/11.0.27/tomcat-embed-websocket-11.0.27.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-tomcat/4.1.2/spring-boot-tomcat-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-http-converter/4.1.2/spring-boot-http-converter-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot/4.1.2/spring-boot-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/spring-context/7.0.10/spring-context-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-web/7.0.10/spring-web-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-beans/7.0.10/spring-beans-7.0.10.jar:/home/atambek/.m2/repository/io/micrometer/micrometer-observation/1.17.2/micrometer-observation-1.17.2.jar:/home/atambek/.m2/repository/io/micrometer/micrometer-commons/1.17.2/micrometer-commons-1.17.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-webmvc/4.1.2/spring-boot-webmvc-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-servlet/4.1.2/spring-boot-servlet-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/spring-webmvc/7.0.10/spring-webmvc-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-aop/7.0.10/spring-aop-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-expression/7.0.10/spring-expression-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-validation/4.1.2/spring-boot-starter-validation-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter/4.1.2/spring-boot-starter-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-logging/4.1.2/spring-boot-starter-logging-4.1.2.jar:/home/atambek/.m2/repository/ch/qos/logback/logback-classic/1.5.38/logback-classic-1.5.38.jar:/home/atambek/.m2/repository/ch/qos/logback/logback-core/1.5.38/logback-core-1.5.38.jar:/home/atambek/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.25.5/log4j-to-slf4j-2.25.5.jar:/home/atambek/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.5/log4j-api-2.25.5.jar:/home/atambek/.m2/repository/org/slf4j/jul-to-slf4j/2.0.20/jul-to-slf4j-2.0.20.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/4.1.2/spring-boot-autoconfigure-4.1.2.jar:/home/atambek/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/home/atambek/.m2/repository/org/yaml/snakeyaml/2.6/snakeyaml-2.6.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.jar:/home/atambek/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/11.0.27/tomcat-embed-el-11.0.27.jar:/home/atambek/.m2/repository/org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.jar:/home/atambek/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.1/jakarta.validation-api-3.1.1.jar:/home/atambek/.m2/repository/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar:/home/atambek/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/home/atambek/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/3.1.1/springdoc-openapi-starter-webmvc-ui-3.1.1.jar:/home/atambek/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/3.1.1/springdoc-openapi-starter-webmvc-api-3.1.1.jar:/home/atambek/.m2/repository/org/springdoc/springdoc-openapi-starter-common/3.1.1/springdoc-openapi-starter-common-3.1.1.jar:/home/atambek/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.55/swagger-core-jakarta-2.2.55.jar:/home/atambek/.m2/repository/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar:/home/atambek/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.55/swagger-annotations-jakarta-2.2.55.jar:/home/atambek/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.55/swagger-models-jakarta-2.2.55.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.7/jackson-dataformat-yaml-2.21.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.7/jackson-datatype-jsr310-2.21.7.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-web-server/4.1.2/spring-boot-web-server-4.1.2.jar:/home/atambek/.m2/repository/org/webjars/swagger-ui/5.32.14/swagger-ui-5.32.14.jar:/home/atambek/.m2/repository/org/webjars/webjars-locator-lite/1.1.5/webjars-locator-lite-1.1.5.jar:/home/atambek/.m2/repository/org/jspecify/jspecify/1.0.1/jspecify-1.0.1.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc-test/4.1.2/spring-boot-starter-webmvc-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-jackson-test/4.1.2/spring-boot-starter-jackson-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-test/4.1.2/spring-boot-starter-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-test/4.1.2/spring-boot-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/4.1.2/spring-boot-test-autoconfigure-4.1.2.jar:/home/atambek/.m2/repository/com/jayway/jsonpath/json-path/2.10.0/json-path-2.10.0.jar:/home/atambek/.m2/repository/org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar:/home/atambek/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.5/jakarta.xml.bind-api-4.0.5.jar:/home/atambek/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/atambek/.m2/repository/net/minidev/json-smart/2.6.0/json-smart-2.6.0.jar:/home/atambek/.m2/repository/net/minidev/accessors-smart/2.6.0/accessors-smart-2.6.0.jar:/home/atambek/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/atambek/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/home/atambek/.m2/repository/net/bytebuddy/byte-buddy/1.18.15/byte-buddy-1.18.15.jar:/home/atambek/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar:/home/atambek/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter/6.0.3/junit-jupiter-6.0.3.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.3/junit-jupiter-api-6.0.3.jar:/home/atambek/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/atambek/.m2/repository/org/junit/platform/junit-platform-commons/6.0.3/junit-platform-commons-6.0.3.jar:/home/atambek/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.0.3/junit-jupiter-params-6.0.3.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.3/junit-jupiter-engine-6.0.3.jar:/home/atambek/.m2/repository/org/junit/platform/junit-platform-engine/6.0.3/junit-platform-engine-6.0.3.jar:/home/atambek/.m2/repository/org/mockito/mockito-core/5.23.0/mockito-core-5.23.0.jar:/home/atambek/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.15/byte-buddy-agent-1.18.15.jar:/home/atambek/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/atambek/.m2/repository/org/mockito/mockito-junit-jupiter/5.23.0/mockito-junit-jupiter-5.23.0.jar:/home/atambek/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/atambek/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/atambek/.m2/repository/org/springframework/spring-core/7.0.10/spring-core-7.0.10.jar:/home/atambek/.m2/repository/commons-logging/commons-logging/1.3.6/commons-logging-1.3.6.jar:/home/atambek/.m2/repository/org/springframework/spring-test/7.0.10/spring-test-7.0.10.jar:/home/atambek/.m2/repository/org/xmlunit/xmlunit-core/2.11.0/xmlunit-core-2.11.0.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc/4.1.2/spring-boot-starter-webmvc-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-webmvc-test/4.1.2/spring-boot-webmvc-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-resttestclient/4.1.2/spring-boot-resttestclient-4.1.2.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value="Asia/Bishkek"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="APPLICATION_NAME" value="library"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="/home/atambek/.jdks/ms-21.0.12.1/lib"/>
+    <property name="sun.java.command" value="/home/atambek/LibraryProject_Lab3/library/target/surefire/surefirebooter-20261024171121085_3.jar /home/atambek/LibraryProject_Lab3/library/target/surefire 2026-10-24T17-11-20_966-jvmRun1 surefire-20261024171121085_1tmp surefire_0-20261024171121085_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/atambek/LibraryProject_Lab3/library/target/test-classes:/home/atambek/LibraryProject_Lab3/library/target/classes:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-web/4.1.2/spring-boot-starter-web-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-jackson/4.1.2/spring-boot-starter-jackson-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-jackson/4.1.2/spring-boot-jackson-4.1.2.jar:/home/atambek/.m2/repository/tools/jackson/core/jackson-databind/3.1.7/jackson-databind-3.1.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar:/home/atambek/.m2/repository/tools/jackson/core/jackson-core/3.1.7/jackson-core-3.1.7.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/4.1.2/spring-boot-starter-tomcat-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat-runtime/4.1.2/spring-boot-starter-tomcat-runtime-4.1.2.jar:/home/atambek/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/11.0.27/tomcat-embed-core-11.0.27.jar:/home/atambek/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/11.0.27/tomcat-embed-websocket-11.0.27.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-tomcat/4.1.2/spring-boot-tomcat-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-http-converter/4.1.2/spring-boot-http-converter-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot/4.1.2/spring-boot-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/spring-context/7.0.10/spring-context-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-web/7.0.10/spring-web-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-beans/7.0.10/spring-beans-7.0.10.jar:/home/atambek/.m2/repository/io/micrometer/micrometer-observation/1.17.2/micrometer-observation-1.17.2.jar:/home/atambek/.m2/repository/io/micrometer/micrometer-commons/1.17.2/micrometer-commons-1.17.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-webmvc/4.1.2/spring-boot-webmvc-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-servlet/4.1.2/spring-boot-servlet-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/spring-webmvc/7.0.10/spring-webmvc-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-aop/7.0.10/spring-aop-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/spring-expression/7.0.10/spring-expression-7.0.10.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-validation/4.1.2/spring-boot-starter-validation-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter/4.1.2/spring-boot-starter-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-logging/4.1.2/spring-boot-starter-logging-4.1.2.jar:/home/atambek/.m2/repository/ch/qos/logback/logback-classic/1.5.38/logback-classic-1.5.38.jar:/home/atambek/.m2/repository/ch/qos/logback/logback-core/1.5.38/logback-core-1.5.38.jar:/home/atambek/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.25.5/log4j-to-slf4j-2.25.5.jar:/home/atambek/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.5/log4j-api-2.25.5.jar:/home/atambek/.m2/repository/org/slf4j/jul-to-slf4j/2.0.20/jul-to-slf4j-2.0.20.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/4.1.2/spring-boot-autoconfigure-4.1.2.jar:/home/atambek/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/home/atambek/.m2/repository/org/yaml/snakeyaml/2.6/snakeyaml-2.6.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.jar:/home/atambek/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/11.0.27/tomcat-embed-el-11.0.27.jar:/home/atambek/.m2/repository/org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.jar:/home/atambek/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.1/jakarta.validation-api-3.1.1.jar:/home/atambek/.m2/repository/org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar:/home/atambek/.m2/repository/com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar:/home/atambek/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/3.1.1/springdoc-openapi-starter-webmvc-ui-3.1.1.jar:/home/atambek/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/3.1.1/springdoc-openapi-starter-webmvc-api-3.1.1.jar:/home/atambek/.m2/repository/org/springdoc/springdoc-openapi-starter-common/3.1.1/springdoc-openapi-starter-common-3.1.1.jar:/home/atambek/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.55/swagger-core-jakarta-2.2.55.jar:/home/atambek/.m2/repository/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar:/home/atambek/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.55/swagger-annotations-jakarta-2.2.55.jar:/home/atambek/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.55/swagger-models-jakarta-2.2.55.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.7/jackson-dataformat-yaml-2.21.7.jar:/home/atambek/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.7/jackson-datatype-jsr310-2.21.7.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-web-server/4.1.2/spring-boot-web-server-4.1.2.jar:/home/atambek/.m2/repository/org/webjars/swagger-ui/5.32.14/swagger-ui-5.32.14.jar:/home/atambek/.m2/repository/org/webjars/webjars-locator-lite/1.1.5/webjars-locator-lite-1.1.5.jar:/home/atambek/.m2/repository/org/jspecify/jspecify/1.0.1/jspecify-1.0.1.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc-test/4.1.2/spring-boot-starter-webmvc-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-jackson-test/4.1.2/spring-boot-starter-jackson-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-test/4.1.2/spring-boot-starter-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-test/4.1.2/spring-boot-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/4.1.2/spring-boot-test-autoconfigure-4.1.2.jar:/home/atambek/.m2/repository/com/jayway/jsonpath/json-path/2.10.0/json-path-2.10.0.jar:/home/atambek/.m2/repository/org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar:/home/atambek/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.5/jakarta.xml.bind-api-4.0.5.jar:/home/atambek/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar:/home/atambek/.m2/repository/net/minidev/json-smart/2.6.0/json-smart-2.6.0.jar:/home/atambek/.m2/repository/net/minidev/accessors-smart/2.6.0/accessors-smart-2.6.0.jar:/home/atambek/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/home/atambek/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/home/atambek/.m2/repository/net/bytebuddy/byte-buddy/1.18.15/byte-buddy-1.18.15.jar:/home/atambek/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar:/home/atambek/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter/6.0.3/junit-jupiter-6.0.3.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.3/junit-jupiter-api-6.0.3.jar:/home/atambek/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/atambek/.m2/repository/org/junit/platform/junit-platform-commons/6.0.3/junit-platform-commons-6.0.3.jar:/home/atambek/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.0.3/junit-jupiter-params-6.0.3.jar:/home/atambek/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.3/junit-jupiter-engine-6.0.3.jar:/home/atambek/.m2/repository/org/junit/platform/junit-platform-engine/6.0.3/junit-platform-engine-6.0.3.jar:/home/atambek/.m2/repository/org/mockito/mockito-core/5.23.0/mockito-core-5.23.0.jar:/home/atambek/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.15/byte-buddy-agent-1.18.15.jar:/home/atambek/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/atambek/.m2/repository/org/mockito/mockito-junit-jupiter/5.23.0/mockito-junit-jupiter-5.23.0.jar:/home/atambek/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/atambek/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/atambek/.m2/repository/org/springframework/spring-core/7.0.10/spring-core-7.0.10.jar:/home/atambek/.m2/repository/commons-logging/commons-logging/1.3.6/commons-logging-1.3.6.jar:/home/atambek/.m2/repository/org/springframework/spring-test/7.0.10/spring-test-7.0.10.jar:/home/atambek/.m2/repository/org/xmlunit/xmlunit-core/2.11.0/xmlunit-core-2.11.0.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-starter-webmvc/4.1.2/spring-boot-starter-webmvc-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-webmvc-test/4.1.2/spring-boot-webmvc-test-4.1.2.jar:/home/atambek/.m2/repository/org/springframework/boot/spring-boot-resttestclient/4.1.2/spring-boot-resttestclient-4.1.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/atambek"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="/home/atambek/.jdks/ms-21.0.12.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/atambek/LibraryProject_Lab3/library"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/atambek/LibraryProject_Lab3/library/target/surefire/surefirebooter-20261024171121085_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.12.1+1-LTS"/>
+    <property name="user.name" value="atambek"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.17.0-29-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-14941483"/>
+    <property name="localRepository" value="/home/atambek/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.12.1"/>
+    <property name="user.dir" value="/home/atambek/LibraryProject_Lab3/library"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="108867"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="21.0.12.1+1-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[library] "/>
+  </properties>
+  <testcase name="deleteBook_withActiveLoans_returns409" classname="kg.course.library.LibraryApiIntegrationTest" time="0.92">
+    <system-out><![CDATA[17:11:22.320 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kg.course.library.LibraryApiIntegrationTest]: LibraryApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:11:22.429 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kg.course.library.LibraryApplication for test class kg.course.library.LibraryApiIntegrationTest
+17:11:22.516 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kg.course.library.LibraryApiIntegrationTest]: LibraryApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:11:22.525 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kg.course.library.LibraryApplication for test class kg.course.library.LibraryApiIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:22.807+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:22.808+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:24.263+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:24.263+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:24.266+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:24.293+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 1.723 seconds (process running for 3.126)
+2026-10-24T17:11:24.296+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:24.297+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:24.298+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:24.298+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/atambek/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.15/byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="deleteBook_notFound_returns404" classname="kg.course.library.LibraryApiIntegrationTest" time="0.017">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:25.251+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:25.251+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:25.669+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:25.669+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:25.670+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:25.679+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.45 seconds (process running for 4.512)
+2026-10-24T17:11:25.680+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:25.680+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:25.680+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:25.681+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="getReader_notFound_returns404" classname="kg.course.library.LibraryApiIntegrationTest" time="0.016">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:25.729+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:25.729+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:26.023+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:26.023+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:26.024+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:26.032+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.329 seconds (process running for 4.865)
+2026-10-24T17:11:26.033+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:26.033+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:26.034+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:26.034+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="reports_top_defaultN_returns200" classname="kg.course.library.LibraryApiIntegrationTest" time="0.028">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:26.076+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:26.076+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:26.363+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:26.363+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:26.364+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:26.371+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.318 seconds (process running for 5.204)
+2026-10-24T17:11:26.372+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:26.372+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:26.372+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:26.372+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="internalError_returns500WithoutExceptionDetails" classname="kg.course.library.LibraryApiIntegrationTest" time="0.054">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:26.422+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:26.422+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:26.686+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:26.686+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:26.687+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:26.694+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.289 seconds (process running for 5.527)
+2026-10-24T17:11:26.695+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:26.695+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:26.695+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:26.696+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-24T17:11:26.700+06:00 ERROR 108867 --- [library] [           main] k.c.library.web.ApiExceptionHandler      : Необработанное исключение: секретный текст: внутренняя деталь реализации
+
+java.lang.RuntimeException: секретный текст: внутренняя деталь реализации
+	at kg.course.library.web.TestBoomController.boom(TestBoomController.java:18) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.10.jar:7.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.10.jar:7.0.10]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.10.jar:7.0.10]
+	at kg.course.library.LibraryApiIntegrationTest.internalError_returns500WithoutExceptionDetails(LibraryApiIntegrationTest.java:330) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+]]></system-out>
+  </testcase>
+  <testcase name="registerReader_badCardNumber_returns400" classname="kg.course.library.LibraryApiIntegrationTest" time="0.034">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:26.777+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:26.778+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:27.050+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:27.050+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:27.051+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:27.060+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.307 seconds (process running for 5.893)
+2026-10-24T17:11:27.060+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:27.061+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:27.061+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:27.061+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="issueBook_overLimit_returns409" classname="kg.course.library.LibraryApiIntegrationTest" time="0.052">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:27.121+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:27.121+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:27.353+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:27.353+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:27.354+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:27.361+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.26 seconds (process running for 6.194)
+2026-10-24T17:11:27.362+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:27.362+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:27.362+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:27.362+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="createBook_invalidIsbn_returns400" classname="kg.course.library.LibraryApiIntegrationTest" time="0.017">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:27.439+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:27.439+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:27.649+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:27.650+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:27.651+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:27.657+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.24 seconds (process running for 6.49)
+2026-10-24T17:11:27.658+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:27.658+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:27.658+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:27.658+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="getReader_byCardNumber_returns200" classname="kg.course.library.LibraryApiIntegrationTest" time="0.025">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:27.693+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:27.693+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:27.911+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:27.911+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:27.912+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:27.918+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.24 seconds (process running for 6.751)
+2026-10-24T17:11:27.918+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:27.919+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:27.919+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:27.919+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="loans_overdueFilter_returnsOnlyOverdueOnFixedDate" classname="kg.course.library.LibraryApiIntegrationTest" time="0.016">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:27.963+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:27.963+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:28.160+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:28.160+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:28.161+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:28.169+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.222 seconds (process running for 7.002)
+2026-10-24T17:11:28.169+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:28.170+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:28.170+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:28.170+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="registerReader_returns201AndLocation" classname="kg.course.library.LibraryApiIntegrationTest" time="0.019">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:28.208+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:28.209+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:28.464+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:28.465+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:28.466+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:28.474+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.284 seconds (process running for 7.307)
+2026-10-24T17:11:28.475+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:28.475+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:28.475+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:28.476+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="getBook_notFound_returns404ProblemJson" classname="kg.course.library.LibraryApiIntegrationTest" time="0.009">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:28.514+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:28.514+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:28.704+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:28.704+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:28.705+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:28.711+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.213 seconds (process running for 7.544)
+2026-10-24T17:11:28.712+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:28.712+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:28.712+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:28.712+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="reports_top_nLessThanOne_returns400" classname="kg.course.library.LibraryApiIntegrationTest" time="0.01">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:28.735+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:28.735+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:28.929+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:28.929+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:28.930+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:28.935+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.211 seconds (process running for 7.768)
+2026-10-24T17:11:28.936+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:28.936+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:28.936+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:28.936+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="searchBooks_byTitle_returnsMatching" classname="kg.course.library.LibraryApiIntegrationTest" time="0.02">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:28.961+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:28.962+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:29.151+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:29.152+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:29.152+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-24T17:11:29.158+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.209 seconds (process running for 7.991)
+2026-10-24T17:11:29.159+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:29.159+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:29.159+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:29.159+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="issueAndReturnBook_success" classname="kg.course.library.LibraryApiIntegrationTest" time="0.036">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:29.199+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:29.199+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:29.393+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:29.393+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:29.394+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:29.399+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.217 seconds (process running for 8.232)
+2026-10-24T17:11:29.400+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:29.400+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:29.400+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:29.400+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="createBook_duplicate_returns409" classname="kg.course.library.LibraryApiIntegrationTest" time="0.022">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:29.452+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:29.452+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:29.633+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:29.633+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:29.634+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:29.639+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.2 seconds (process running for 8.471)
+2026-10-24T17:11:29.639+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:29.639+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:29.639+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:29.639+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="registerReader_duplicate_returns409" classname="kg.course.library.LibraryApiIntegrationTest" time="0.019">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:29.678+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:29.678+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:29.878+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:29.878+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:29.878+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-24T17:11:29.884+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.22 seconds (process running for 8.717)
+2026-10-24T17:11:29.884+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:29.885+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:29.885+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:29.885+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="createBook_returns201AndLocation" classname="kg.course.library.LibraryApiIntegrationTest" time="0.016">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:29.920+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:29.921+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:30.091+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:30.091+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:30.092+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:30.098+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.192 seconds (process running for 8.93)
+2026-10-24T17:11:30.098+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:30.098+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:30.098+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:30.098+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="createBook_blankTitle_returns400WithTitleInErrors" classname="kg.course.library.LibraryApiIntegrationTest" time="0.017">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:30.130+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:30.130+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:30.351+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:30.351+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:30.353+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-24T17:11:30.359+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.242 seconds (process running for 9.192)
+2026-10-24T17:11:30.359+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:30.359+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:30.359+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:30.360+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+  <testcase name="getBook_byIsbn_returns200" classname="kg.course.library.LibraryApiIntegrationTest" time="0.018">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-24T17:11:30.392+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Starting LibraryApiIntegrationTest using Java 21.0.12.1 with PID 108867 (started by atambek in /home/atambek/LibraryProject_Lab3/library)
+2026-10-24T17:11:30.392+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2026-10-24T17:11:30.580+06:00  INFO 108867 --- [library] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-24T17:11:30.580+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-24T17:11:30.581+06:00  INFO 108867 --- [library] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-24T17:11:30.587+06:00  INFO 108867 --- [library] [           main] k.c.library.LibraryApiIntegrationTest    : Started LibraryApiIntegrationTest in 0.208 seconds (process running for 9.42)
+2026-10-24T17:11:30.588+06:00  WARN 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Файл импорта книг не найден: /home/atambek/LibraryProject_Lab3/library/absent-books.csv — приложение запускается с пустым каталогом
+2026-10-24T17:11:30.588+06:00  INFO 108867 --- [library] [           main] kg.course.library.config.LibraryConfig   : Регистрация читателей в каталоге: 3 (STUDENT, GUEST, TEACHER)
+2026-10-24T17:11:30.588+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-24T17:11:30.588+06:00  WARN 108867 --- [library] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  </testcase>
+</testsuite>

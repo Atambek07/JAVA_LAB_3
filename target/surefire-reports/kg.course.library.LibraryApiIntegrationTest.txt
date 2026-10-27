@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: kg.course.library.LibraryApiIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.518 s -- in kg.course.library.LibraryApiIntegrationTest
